@@ -19,8 +19,8 @@ end
 
 % Convert to discretized pixel coordinates
 N = size(points, 2); % Number of points N given by second axis of points
-points = [points; % Normalized (and distorted if D given) 3-D points in camera reference
-          ones(1, N)]; % Augment by ones
+points = [points(1:2, :); % Normalized (and distorted if D given) 3-D points in camera reference w/o z-coordinate
+          ones(1, N)]; % Augment by ones to replace z-coordinate
 projected_points = K * points; % Apply projection to image pane
 projected_points = projected_points(1:2, :); % Remove augmentation
 end
