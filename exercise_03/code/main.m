@@ -1,6 +1,6 @@
 % Vision Algorithms for Mobile Robotics
 % Exercise 03 - Harris Corner Detection and Keypoint Tracking
-% Beat Hubmann
+% Beat Hubmann & VAMR course team (skeleton code)
 
 clear all;
 close all;
