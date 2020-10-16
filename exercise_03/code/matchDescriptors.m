@@ -1,7 +1,7 @@
 function matches = matchDescriptors(...
     query_descriptors, database_descriptors, lambda)
-% Uses the sum of squared differences (SSD) to return a row vector
-% indicating which database descriptor best matches a given query
+% Uses the Sum of Squared Differences (SSD) to return a row vector
+% indicating which unique database descriptor best matches a given query
 % descriptor with a tunable matching hyperparameter lambda.
 % IN:   Array of Q query descriptor column vectors of length M:
 %       query_descriptors [M x Q]
@@ -14,7 +14,7 @@ function matches = matchDescriptors(...
 %       for the i-th query descriptor. No two non-zero elements of matches 
 %       are equal.
 
-% use pdist() from the Statistics and Machine Learning Toolbox to calculate
+% use pdist2() from the Statistics and Machine Learning Toolbox to calculate
 % the SSD between the query_descriptors and database_descriptors
 % remark: pdist2 works on rows of its argument matrices => need transpose
 [D, I] = pdist2(database_descriptors', query_descriptors', ...
