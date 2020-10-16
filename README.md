@@ -1,3 +1,4 @@
+![](http://rpg.ifi.uzh.ch/img/logo/rpg_logo.png)
 # 20H-VAMR
 Codes and project work for the course [Vision Algorithms for Mobile Robotics](http://www.vvz.ethz.ch/Vorlesungsverzeichnis/lerneinheit.view?lerneinheitId=139977&semkez=2020W&ansicht=KATALOGDATEN&lang=en), HS2020 @ETHZ
 
