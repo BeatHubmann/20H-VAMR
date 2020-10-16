@@ -27,7 +27,7 @@ non_zero_D = D(D~=0);
 min_non_zero_D = min(non_zero_D, [], 'all');
 
 % only keep matches above matching treshold
-I(D >= lambda * min_non_zero_D) = false;
+I(D > lambda * min_non_zero_D) = false;
 
 % make matches unique and fill into otherwise zeroed result array
 [~, ia, ~] = unique(I, 'stable');
