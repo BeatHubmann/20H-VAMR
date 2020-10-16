@@ -38,4 +38,4 @@ scores(scores<0) = 0;
 patch_radius = floor(patch_size / 2);
 padsize = [1+patch_radius 1+patch_radius];
 scores = padarray(scores, padsize);
-
+end
