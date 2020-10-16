@@ -87,6 +87,7 @@ for i = img_indices
     imshow(img); hold on;
     
     scores = harris(img, corner_patch_size, harris_kappa);
+%     scores = shi_tomasi(img, corner_patch_size);
     kp = selectKeypoints(...
         scores, num_keypoints, nonmaximum_supression_radius);
     plot(kp(2, :), kp(1, :), 'rx', 'Linewidth', 2);
