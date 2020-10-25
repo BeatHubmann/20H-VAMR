@@ -7,6 +7,7 @@ Codes and project work for the course [Vision Algorithms for Mobile Robotics](ht
 - [Augmented reality wireframe cube](./exercise_01/main.m)
 - [PnP with DLT](./exercise_02/code/main.m)
 - [Harris & Shi-Tomasi Corner Detection and Keypoint Tracking](./exercise_03/code/main.m)
+- [Scale-Invariant Feature Transform (SIFT)](./exercise_04/code/main.m)
 
 ## Course synopsis
 
