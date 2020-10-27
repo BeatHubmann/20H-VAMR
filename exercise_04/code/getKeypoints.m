@@ -23,8 +23,6 @@ function kpt_candidates = getKeypoints(DoGs, contrast_threshold)
         % flatten bottom and top cover of kpt stack as we don't want those
         kpt_stack(:, :, 1) = false;
         kpt_stack(:, :, end) = false;
-        % extract linear indices of kpts and convert to x,y,z stack coords
-        [x, y, z] = ind2sub(size(kpt_stack), find(kpt_stack));
-        kpt_candidates{i} = horzcat(x, y, z)';
+        kpt_candidates{i} = kpt_stack;
     end
 end
