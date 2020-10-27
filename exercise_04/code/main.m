@@ -3,6 +3,7 @@
 % Beat Hubmann, VAMR course team (derotatePatch.m, getImage.m),
 % and Peter Kovesi (weightedhistc.m)
 
+clf;
 clear all;
 close all;
 
@@ -31,10 +32,11 @@ for img_idx = 1:2
     % get blurred images per octave, num_scales+3 blurred images each
     blurred_images = getBlurredImages(image_pyramid, num_scales, sigma_0);
     % get DoG per octave, num_scales+2 each
-    diff_gaussians = getDoGs(blurred_images);
-    % get keypoints with non-maximum suppression, discard low-contrast keypoints
-    kpt_candidates = getKeypoints(diff_gaussians, contrast_treshold);
-    % get descriptors & final keypoints, discard close-to-border keypoints
+    DoGs = getDoGs(blurred_images);
+    % get keypoints with non-maximum suppression,
+    % discard low-contrast keypoints
+    kpt_candidates = getKeypoints(DoGs, contrast_threshold);
+    % get descriptors & final keypoints
     [kpt_locations{img_idx}, descriptors{img_idx}] = ...
         getFinalKeypointsDescriptors(blurred_images, kpt_candidates)
 end
